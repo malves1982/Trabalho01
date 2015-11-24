@@ -5,6 +5,7 @@
  */
 package trabalho01;
 
+import java.awt.Button;
 import java.awt.Frame;
 
 /**
@@ -16,6 +17,14 @@ public class Trabalho01 extends Frame{
     public Trabalho01() {
         setVisible(true);
         setSize(300, 300);
+        setTitle("janela 1");
+        addWindowListener(new FecharJanelaTratador(this));
+        
+        Button b = new Button("botão 1");
+        
+        b.addActionListener(new Botao01Tratador());
+        
+        add(b);
     }
 
     
